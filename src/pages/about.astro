@@ -1,1 +1,96 @@
-<h1>Hello</h1>
+---
+import experiences from '../collections/experiences.json';
+import AboutExperience from "../components/about-experience.astro";
+import PageHeading from "../components/page-heading.astro";
+import Layout from "../layouts/main.astro";
+---
+
+<Layout title="À propos de moi">
+  <section class="relative z-20 max-w-2xl mx-auto my-12 px-7 lg:px-0">
+    <PageHeading
+    title="À propos de moi"
+    description="Bonjour 👋 Je suis un développeur en cybersécurité basé à Marseille, France. Je suis passionné par la création de nouveaux produits et l'apprentissage de nouvelles technologies."
+    
+    />
+
+    <img src="https://i.ibb.co/02ft4K6/DALL-E-2024-11-27-12-49.jpg" alt="DALL-E-2024-11-27-12-49"  class="relative z-30 w-full my-10 rounded-xl" />
+
+    <h2 class="mb-2 text-2xl font-bold dark:text-neutral-200">Petite Biographie</h2>
+    <p
+      class="text-sm leading-6 text-gray-600 dark:text-neutral-400 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg"
+    >
+      Cybersecuriter dev , Html, CSS, Python, VMWare.
+    </p>
+
+    <h2
+      class="mt-5 mb-2 text-2xl font-bold lg:mt-10 sm:mt-6 dark:text-neutral-200"
+    >
+      Expérience
+    </h2>
+    <div class="px-5 py-10">
+      {
+        experiences.map((experience) => {
+          return (
+            <div class="pb-10 border-l border-gray-200 last:border-l-0 dark:border-neutral-700">
+              <AboutExperience
+                dates={experience.dates}
+                role={experience.role}
+                company={experience.company}
+                description={experience.description}
+                logo={experience.logo}
+              />
+            </div>
+          )
+        })
+      }
+    </div>
+    <h2 class="mb-2 text-2xl font-bold dark:text-neutral-200">Hard et softskill</h2>
+    <p
+      class="text-sm leading-6 text-gray-600 dark:text-neutral-400 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg"
+    >
+    <h3 class="mb-2 text-2xl font-bold dark:text-neutral-200">Hardskill</h3>
+<br>
+  <li>Systèmes d'exploitation : Connaissance approfondie de Linux/Unix, Windows et macOS.</li>
+  <li>Programmation et scripts : Compétences en Python, Bash, PowerShell</li>
+  <li>Langages appris : HTML 5, CSS et Python</li>
+  <li>Virtualisation et conteneurs : Utilisation de technologies comme VMware, VirtualBox</li>
+  <li>Utilisation de l'IA : Connaissances avancées dans tous types d'intelligence artificielle</li>
+<br>
+<h3 class="mb-2 text-2xl font-bold dark:text-neutral-200">Softskill</h3>
+<br>
+  <li>Compétences analytiques : Résolution de problèmes complexes et pensée critique</li>
+  <li>Communication : Communication claire et concise, rédaction de rapports, et collaboration interdisciplinaire</li>
+  <li>Gestion du stress : Calme sous pression, résilience et gestion du temps</li>
+  <li>Esprit d'équipe : Collaboration, médiation et partage des connaissances</li>
+  <li>Adaptabilité : Capacité d'apprentissage continu, flexibilité et créativité</li>
+  <li>Curiosité et passion : Passion pour la cybersécurité et esprit orienté recherche</li>
+  <li>Gestion de projet : Organisation, gestion des priorités et coordination</li>
+  <li>Prise de décision : Évaluation rapide des risques, pensée stratégique et priorisation des actions</li>
+<br>
+
+    </p>
+    <h2 class="mb-2 text-2xl font-bold dark:text-neutral-200">Curriculum vitae</h2>
+    <p
+      class="text-sm leading-6 text-gray-600 dark:text-neutral-400 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg"
+    >
+    <img src="https://i.ibb.co/G2NsQzd/CV-Lloca-Bastien-Job.png" alt="CV-Lloca-Bastien-Job" >
+    </p>
+    <h2
+      class="mt-5 mb-2 text-2xl font-bold lg:mt-10 sm:mt-6 dark:text-neutral-200"
+    ></h2>
+
+    <h2 class="mt-5 mb-2 text-2xl font-bold lg:mt-10 sm:mt-6 dark:text-neutral-200">Me Contacter</h2>
+    <p
+      class="text-sm leading-6 text-gray-600 dark:text-neutral-400 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg"
+    >
+    Si vous souhaitez rester à jour avec mon travail, n'hésitez pas à <a
+    href="https://github.com/bastien-llorca"
+    target="_blank"
+    class="text-indigo-600 underline">me suivre sur Github</a
+  >, ou vous pouvez m'envoyer un <a href="mailto:llorcabastien#gmail.fr" class="text-indigo-600 underline"
+    >email</a
+  >, et je vous répondrai avec plaisir.
+
+    </p>
+  </section>
+</Layout>
