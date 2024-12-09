@@ -1,13 +1,11 @@
 import { defineConfig } from "astro/config";
+import netlify from "@astrojs/netlify";
 
-import tailwind from "@astrojs/tailwind";
-
-// https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind()],
-  site: "https://github.com/bastien-llorca/Portfolio",
-  base: "/Portfolio/", // Nom du dépôt (exemple)
-  outDir: "./dist", // Assurez-vous que le dossier de sortie est correct
-  integrations: [], // Ajoutez les intégrations nécessaires
-  output: "server", // Passez en mode serveur
+  output: "server", // Pour SSR (peut être 'static' si vous générez un site statique)
+  adapter: netlify({
+    // Ajoutez des options si nécessaire
+    edge: false, // Si vous utilisez des fonctions Netlify Edge (par défaut: false)
+    split: false, // Pour activer le code splitting dans Netlify (par défaut: false)
+  }),
 });

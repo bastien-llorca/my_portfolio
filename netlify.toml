@@ -1,0 +1,7 @@
+[build]
+  command = "npm run build" # Commande pour construire le site
+  publish = "dist" # Dossier généré par Astro
+  functions = "netlify/functions" # Si vous utilisez SSR ou des fonctions
+
+[functions]
+  node_bundler = "esbuild"
