@@ -7,5 +7,6 @@ export default defineConfig({
     // Ajoutez des options si nécessaire
     edge: false, // Si vous utilisez des fonctions Netlify Edge (par défaut: false)
     split: false, // Pour activer le code splitting dans Netlify (par défaut: false)
+    integrations: [tailwind()],
   }),
 });
