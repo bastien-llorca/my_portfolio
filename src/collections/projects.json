@@ -1,0 +1,25 @@
+[
+  {
+    "name": "Tic Tac Toe",
+    "description": "Tic Tac Toe jeu en python",
+    "image": "/assets/images/projects/tempmail.best.png",
+    "url": "https://github.com/bastien-llorca/Tic-Tac-Toe"
+  },
+  {
+    "name": "Fansite",
+    "description": "Fansite dédier a Dj LeBask, Damian Marley et Daft Punk ",
+    "image": "/assets/images/projects/dns.surf.png",
+    "url": "https://github.com/lucas-chhim/Newfansite"
+  },
+  {
+    "name": "Script Python",
+    "description": "Script Python pour configurer l'audio de Call of Duty 6",
+    "image": "https://cdn-uploads.gameblog.fr/img/news/567352_6655e91f1acb0.jpg",
+    "url": "https://html.zone"
+  },
+  {
+    "name": "Projet futur",
+    "description": "Projet à venir",
+    "image": "https://telesecretaire-mlg.fr/wp-content/uploads/2023/08/micropraxie.webp"
+  }
+]
