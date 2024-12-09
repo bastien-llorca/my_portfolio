@@ -1,15 +1,15 @@
 [
   {
     "name": "Accueil",
-    "url": "src/pages/index.astro"
+    "url": "/index.astro"
   },
 
   {
     "name": "Projet",
-    "url": "src/pages/projects.astro"
+    "url": "/projects.astro"
   },
   {
     "name": "À propos",
-    "url": "src/pages/about.astro"
+    "url": "/about.astro"
   }
 ]
